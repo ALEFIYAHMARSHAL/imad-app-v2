@@ -8,9 +8,10 @@ element.innerHTML = 'New value';
 var img = document.getElementById('alif');
 var marginLeft = 0;
 function marginRight () {
-   for(;marginLeft < '50px'; marginLeft = marginLeft + 1){
+   //for(;marginLeft < '50px'; marginLeft = marginLeft + 1){
+   marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
-   }
+   //
     }
     
 img.onclick = function () {
