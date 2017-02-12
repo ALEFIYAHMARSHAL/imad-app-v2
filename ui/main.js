@@ -8,7 +8,7 @@ element.innerHTML = 'New value';
 var img = document.getElementById('alif');
 var marginLeft = 0;
 function marginRight () {
-    marginLeft = marginLeft + 5;
+    marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
     }
     
