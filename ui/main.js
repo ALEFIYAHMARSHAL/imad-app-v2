@@ -8,11 +8,11 @@ element.innerHTML = 'New value';
 var img = document.getElementById('alif');
 var marginLeft = 0;
 function marginRight () {
-    marginLeft = marginLeft + 10;
+    marginLeft = marginLeft + 5;
     img.style.marginLeft = marginLeft + 'px';
     }
     
 img.onclick = function () {
-    var interval = setInterval(marginRight,100);
+    var interval = setInterval(marginRight,50);
     img.style.marginLeft = '100px';
 };
