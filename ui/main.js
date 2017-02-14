@@ -1,14 +1,25 @@
 //counter code
 var button = document.getElementById('counter');
-var counter = 0;
+//var counter = 0;
 
 button.onclick = function(){
-    //Make a request to the counter endpoint
+    //Create a request objects
+    var request = XMLHttpRequest();
     
     //Capture the response and store it in a variable
-    
-    //Render the variable in a correct span
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
-};
+    request.onreadystatechange = function(){
+        if(request.readystate == XMLhttprequest.DONE){
+            //take some action
+            if(request.status == 200){
+                var counter = request.responseText;
+                //counter = counter + 1;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            } 
+        }
+        //Not Done yet ignore it
+    };
+    //Make a request to the counter endpoint
+        request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/counter',true);
+        request.send(null);
+   };
