@@ -43,16 +43,14 @@ var articles = {
     }
 };
 function createTemplate(data){ 
- var title = data.title;
+ //var title = data.title;
  var heading = data.heading;
  var date = data.date;
  var content = data.content;
  var htmlTemplate = `
     <html>
     <head>
-     <title>
-        ${title}
-     </title>
+     
      <meta name="viewport" content="width-device-width,intial-scale=1"/>
      <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -104,9 +102,9 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
+/*app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
+});*/
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
