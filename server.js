@@ -42,7 +42,7 @@ var articles = {
     
     }
 };
-function createTemplate(data){ 
+/*function createTemplate(data){ 
  //var title = data.title;
  var heading = data.heading;
  var date = data.date;
@@ -50,7 +50,9 @@ function createTemplate(data){
  var htmlTemplate = `
     <html>
     <head>
-     
+     <title>
+        ${title}
+     </title>
      <meta name="viewport" content="width-device-width,intial-scale=1"/>
      <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -74,7 +76,7 @@ function createTemplate(data){
     </html>
     `;
     return htmlTemplate;
-}  
+} */ 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
