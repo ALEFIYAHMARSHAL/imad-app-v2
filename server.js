@@ -3,11 +3,11 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-/*var title;
+var title;
 var heading;
 var date;
-var content;*/
-//var articles = { 
+var content;
+var articles = { 
     'article-one' : {
         title : 'Article One | Alefiyah Marshal',
         heading : ' Article one',
@@ -54,7 +54,7 @@ var content;*/
             </p>`
     }
 };
-//function createTemplate(data){ 
+function createTemplate(data){ 
  var title = data.title;
  var heading = data.heading;
  var date = data.date;
