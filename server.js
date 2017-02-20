@@ -43,16 +43,8 @@ var articles = {
                This is the content of my third article.
             </p>`
     
-    },
-    'counter' : {
-        title : 'Counter',
-        heading : 'count',
-        date : 'feb 10,2017',
-         content:
-           `<p>
-               Hi.
-            </p>`
     }
+   
 };
 function createTemplate(data){ 
  var title = data.title;
