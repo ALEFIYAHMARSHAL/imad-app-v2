@@ -3,11 +3,11 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-var title;
+/*var title;
 var heading;
 var date;
-var content;
-var articles = { 
+var content;*/
+//var articles = { 
     'article-one' : {
         title : 'Article One | Alefiyah Marshal',
         heading : ' Article one',
@@ -54,7 +54,7 @@ var articles = {
             </p>`
     }
 };
-function createTemplate(data){ 
+//function createTemplate(data){ 
  var title = data.title;
  var heading = data.heading;
  var date = data.date;
@@ -99,7 +99,7 @@ app.get('/counter',function (req, res) {
     counter = counter + 1;
     res.send(counter.toString());
 });
-app.get('/:articleName',function(req,res){
+//app.get('/:articleName',function(req,res){
     //articleName == article-one
     //articles[articleName] == {} content object for article-one
     var articleName = req.params.articleName;
