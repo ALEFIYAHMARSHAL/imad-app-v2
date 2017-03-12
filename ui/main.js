@@ -23,3 +23,29 @@ button.onclick = function(){
         request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/counter',true);
         request.send(null);
    };
+   
+   //submit name
+   var nameInput = document.getElementById('name');
+   //value of the name
+   var name = nameInput.value;
+   var submit = getElementById('submit_btn');
+   submit.onclick = function() {
+      //Make a request to the server and send the name
+      //capture a list of name and render it as a list
+       var names = ['name1', 'name2' ,'name3', 'name4'];
+       //to convrt to html string
+       var list = '';
+       for(i=0; i<names.length; i++) {
+           list += '<li>' + names[i] + '</li>';
+       }
+           //to insert elemnt in our uordered list
+       var ul = document.getElementById('namelist');
+       ul.innerHTML = list;
+           
+           
+           
+           
+           
+       
+   };
+   
