@@ -25,9 +25,7 @@ button.onclick = function(){
    };
    
    //submit name
-   var nameInput = document.getElementById('name');
-   //value of the name
-   var name = nameInput.value;
+   
    var submit = document.getElementById('submit_btn');
    submit.onclick = function() {
        //Create a request objects
@@ -54,6 +52,9 @@ button.onclick = function(){
         //Not Done yet ignore it
     };
     //Make a request to the counter endpoint
+    var nameInput = document.getElementById('name');
+   //value of the name
+   var name = nameInput.value;
         request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/submit-name?name ='+ name,true);
         request.send(null);
       //Make a request to the server and send the name
