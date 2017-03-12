@@ -58,7 +58,7 @@ button.onclick = function(){
       //Make a request to the server and send the name
       //capture a list of name and render it as a list
        var names = request.responseText;
-       names = JSON.parse(names); //to covert string back to obj
+       names = JSON.parse(name); 
        //to convrt to html string
        var list = '';
        for(i=0; i<names.length; i++) {
