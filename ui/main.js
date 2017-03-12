@@ -55,7 +55,7 @@ button.onclick = function(){
     var nameInput = document.getElementById('name');
    //value of the name
    var name = nameInput.value;
-        request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/submit-name?name ='+ name,true);
+        request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/submit-name?name='+ name,true);
         request.send(null);
       //Make a request to the server and send the name
      
