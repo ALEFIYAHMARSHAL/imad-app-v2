@@ -39,7 +39,8 @@ button.onclick = function(){
             //take some action
             if(request.status === 200){ //this means the request has successfully completed
     //capture a list of name and render it as a list
-       var names = ['name1', 'name2' ,'name3', 'name4'];
+       var names = request.responseText;
+       names = JSON.parse(names);
        //to convrt to html string
        var list = '';
        for(i=0; i<names.length; i++) {
@@ -56,16 +57,6 @@ button.onclick = function(){
         request.open('GET','http://alefiyahmarshal.imad.hasura-app.io/submit-name?name ='+ name,true);
         request.send(null);
       //Make a request to the server and send the name
-      //capture a list of name and render it as a list
-       var names = request.responseText;
-       names = JSON.parse(name); 
-       //to convrt to html string
-       var list = '';
-       for(i=0; i<names.length; i++) {
-           list += '<li>' + names[i] + '</li>';
-       }
-           //to insert elemnt in our uordered list
-       var ul = document.getElementById('namelist');
-       ul.innerHTML = list;
+     
    };
    
