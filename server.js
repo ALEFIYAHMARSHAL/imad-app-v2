@@ -114,10 +114,10 @@ app.get('/counter',function (req, res) {
 });
 
 var names = [];
-app.get('/submit-name',function(req, res) { // /submit-name?name = xxxx
-//Get the name from the request
-var name = req.query.name;
-
+app.get('/submit-name/:name',function(req, res) { // /submit-name?name = xxxx
+//Get the name from the request object
+var name = req.params.name;
+  //var name;//1000
 names.push(name);
 //JSON: javascript objetc notation
 res.send(JSON.stringify(names));
@@ -156,8 +156,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('http://pngimg.com/upload/small/autumn_leaves_PNG3594.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'desktop/Newfolder/autumn_leaves_PNG3594', 'autumn_leaves_PNG3594'));
 });
 
 
