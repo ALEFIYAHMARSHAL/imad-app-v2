@@ -41,11 +41,5 @@ button.onclick = function(){
            //to insert elemnt in our uordered list
        var ul = document.getElementById('namelist');
        ul.innerHTML = list;
-           
-           
-           
-           
-           
-       
    };
    
