@@ -132,7 +132,7 @@ app.get('/articles/:articleName',function(req,res){
    // res.send(createTemplate(articles[articleName]));
    //SELECT * FROM article where title = article-one
    //SELECT * FROM article where title = '\';DELETE * FROM article where 'a' = '\a' ...where the query will dlt article-one entire row from database 
-   pool.query("SELECT * FROM article WHERE title =$1" + req.params.articleName + "'",function(err, res){
+   pool.query("SELECT * FROM article WHERE title =$1" + req.params.articleName + "'",function(err, result){
     if(err){
         res.status(500).send(err.toString());
     }   else {
